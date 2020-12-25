@@ -33,6 +33,7 @@ During the pre-coding stage I had originally planned everything out on my Samsun
 - CSS
 - JavaScript
 - This code consists of many functions, lots and lots of functions. I have also included a randomizer and arrays. The main functionality of the game is an object with arrays and functions all nestled into it.
+- There is no back-end work to this project
 <!-- ![orderCheck](orderCheckFunction.png) -->
 
 ## Credit
@@ -50,7 +51,6 @@ I also want to thank my significant other for keeping me sane and pushing me to 
 
 ## Future Development
 What are the next steps for this project?
-- First and foremost I want to condense and DRY up the code as much as I can. There are a lot of hard coded areas where I could substitute with a proper loop. With the extra time permitted I should have the code looking much cleaner
 - I want to possibly make spin-off versions of this game. The world has so many different types of food, why only stop at burgers? I have been thinking of a sushi maker, a taco constructor, and everything in between.
 <!-- 
 ## Play The Game!
