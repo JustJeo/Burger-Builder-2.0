@@ -1,0 +1,116 @@
+* {
+  font-family: "Chewy", Helvetica;
+}
+
+html {
+  background: url("https://cdn11.bigcommerce.com/s-nq6l4syi/images/stencil/1280x1280/products/18944/19581/76361-1024__17925.1515427213.jpg?c=2?imbypass=on");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body {
+  margin: 100px auto;
+  text-align: center;
+  font-size: 1.75em;
+  width: 75%;
+  height: 100%;
+  background-color: white;
+  border: solid 5px dodgerblue;
+  padding: 0 15px 150px 15px;
+  text-shadow: grey 1px 1px;
+}
+
+button, .btn {
+  color: black;
+  font-size: 1.25em;
+  background: lightgray;
+  border-radius: 10px;
+}
+
+button:hover {
+  filter: brightness(150%);
+}
+
+img {
+  margin: 0 auto;
+  width: 200px;
+  display: none;
+}
+
+.condiment {
+  display: inline;
+  padding: 20px 10px 0px 10px;
+}
+
+.gameName>h1 {
+  display: inline;
+  font-size: 4em;
+  color: dodgerblue;
+  text-shadow: royalblue 5px 5px;
+}
+
+.ingredients {
+  margin-bottom: 50px;
+}
+
+.ingredients>button {
+  margin: 0 10px 0 10px;
+}
+
+#orderUp, #reset {
+  display: none;
+  margin: 50px auto;
+  background: limegreen;
+  color: white;
+}
+
+#ticket {
+  border: solid lightgray 10px;
+  background-color: blanchedalmond;
+  border-radius: 10px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.howTo {
+  color: red;
+}
+
+#begin {
+  margin: 50px 0 50px 0;
+  background: limegreen;
+  color: white;
+}
+
+#timer {
+  color: red;
+}
+
+.update {
+  color: red;
+}
+
+/* For mobile phones */
+@media (max-width: 400px) {
+  body {
+      width: 80%;
+      font-size: 1.5em;
+  }
+  .gameName {
+      font-size: .75em;
+  }
+  .ingredients>button {
+      margin: 0;
+  }
+  #ticket {
+      width: 90%;
+  }
+}
+
+/* For Tablets */
+@media (max-width: 500px) {
+  .gameName {
+      font-size: .75em;
+  }
+}
