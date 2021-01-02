@@ -16,12 +16,12 @@ function timeBegin() {
     if (timer === 0) {
       game.highscoreCheck()
       clearInterval(timeInterval);
-      document.querySelector("#timer").removeEventListener("click", beginGame);
+      document.querySelector(".timer").removeEventListener("click", beginGame);
     } else {
       timer--
       console.log(timer)
     }
-    const timerText = document.getElementById("timer")
+    const timerText = document.querySelector(".timer")
     timerText.innerHTML = `Timer: ${timer}s`
   }, 1000)
 }
@@ -67,31 +67,31 @@ let game = {
       const gameChoice = ["topBun", "onion", "tomato", "lettuce", "patty", "cheese", "bottomBun"]
     if (event.target.id === "topBun") {
       game.playerBurger.unshift(gameChoice[0])
-      document.getElementById("topBunPic").style.display="block"
+      document.querySelector(".topBunPic").style.display="block"
       console.log("Top Bun")
     } else if (event.target.id === "onion") {
       game.playerBurger.unshift(gameChoice[1])
-      document.getElementById("onionPic").style.display="block"
+      document.querySelector(".onionPic").style.display="block"
       console.log("Onion")
     } else if (event.target.id === "tomato") {
       game.playerBurger.unshift(gameChoice[2])
-      document.getElementById("tomatoPic").style.display="block"
+      document.querySelector(".tomatoPic").style.display="block"
       console.log("Tomato")
     } else if (event.target.id === "lettuce") {
       game.playerBurger.unshift(gameChoice[3])
-      document.getElementById("lettucePic").style.display="block"
+      document.querySelector(".lettucePic").style.display="block"
       console.log("Lettuce")
     } else if (event.target.id === "patty") {
       game.playerBurger.unshift(gameChoice[4])
-      document.getElementById("pattyPic").style.display="block"
+      document.querySelector(".pattyPic").style.display="block"
       console.log("Patty")
     } else if (event.target.id === "cheese") {
       game.playerBurger.unshift(gameChoice[5])
-      document.getElementById("cheesePic").style.display="block"
+      document.querySelector(".cheesePic").style.display="block"
       console.log("Cheese")
     } else {
       game.playerBurger.unshift(gameChoice[6])
-      document.getElementById("bottomBunPic").style.display="block"
+      document.querySelector(".bottomBunPic").style.display="block"
       console.log("Bottom Bun")
     }
     // console.log(game.playerBurger)
@@ -118,13 +118,13 @@ let game = {
   // Empties out the player's burger array
   // creates a new customer burger
   resetMe: function() {
-    document.getElementById("bottomBunPic").style.display="none"
-    document.getElementById("cheesePic").style.display="none"
-    document.getElementById("pattyPic").style.display="none"
-    document.getElementById("lettucePic").style.display="none"
-    document.getElementById("tomatoPic").style.display="none"
-    document.getElementById("onionPic").style.display="none"
-    document.getElementById("topBunPic").style.display="none"
+    document.querySelector(".bottomBunPic").style.display="none"
+    document.querySelector(".cheesePic").style.display="none"
+    document.querySelector(".pattyPic").style.display="none"
+    document.querySelector(".lettucePic").style.display="none"
+    document.querySelector(".tomatoPic").style.display="none"
+    document.querySelector(".onionPic").style.display="none"
+    document.querySelector(".topBunPic").style.display="none"
     game.playerBurger = []
     game.customerBurger = ["topBun", "patty", "bottomBun"],
     game.customerOrder()
