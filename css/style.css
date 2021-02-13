@@ -65,7 +65,7 @@ img {
   color: white;
 }
 
-#ticket {
+.ticket {
   border: solid lightgray 10px;
   background-color: blanchedalmond;
   border-radius: 10px;
@@ -83,7 +83,7 @@ img {
   color: white;
 }
 
-#timer {
+.timer {
   color: red;
 }
 

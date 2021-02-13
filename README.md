@@ -3,7 +3,7 @@
 Have you ever wanted to get a small glimpse of what it was like behind the scenes of your favorite burger restaurant? With Burger Builder you're able to take the role of the person making the orders! Play this fast paced game from the bottom up and get the highest score you can get! But be accurate! Every correctly made burger will reward you points but every wrong burger will lose you points!
 
 ## Motivation
-I have officially graduated from my coding bootcamp and wanted to refactor my very first project into a DRY code that would be easier for a coder to look at.
+I have officially graduated from my coding bootcamp and wanted to refactor my very first project into a DRY code that would be easier for a coder to look at. I wanted to follow the same criteria as the project when it was first assigned, therefore there is no back-end included in this project as that was learned later in the course after this project took place.
 
 <!-- ![Final](BurgerBuilderFinal.png) -->
 
