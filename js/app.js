@@ -35,6 +35,7 @@ let game = {
   // Creates an array where it ALWAYS starts with a "topBun", randomizes the middle ingredients, ALWAYS has a "patty", and always ends with a "bottomBun"
   customerOrder: function () {
     let randomOrder = Math.floor(Math.random() * 5);
+    let threeItems = Math.floor(Math.random() * 3);
     if (randomOrder === 4) {
       game.customerBurger.splice(2, 0, "cheese")
       game.customerBurger.splice(1, 0, "lettuce")
@@ -42,10 +43,22 @@ let game = {
       game.customerBurger.splice(1, 0, "onion")
       document.getElementById("ticket").innerHTML = "The customer wants an everything burger! <br><br> Top Bun, Onion, Tomato, Lettuce, Patty, Cheese, Bottom Bun"
     } else if (randomOrder === 3) {
-      game.customerBurger.splice(2, 0, "cheese")
-      game.customerBurger.splice(1, 0, "lettuce")
-      game.customerBurger.splice(1, 0, "onion")
-      document.getElementById("ticket").innerHTML = "The customer wants no tomato! <br><br> Top Bun, Onion, Lettuce, Patty, Cheese, Bottom Bun"
+      if (threeItems === 2) {
+        game.customerBurger.splice(1, 0, "lettuce")
+        game.customerBurger.splice(1,0, "tomato")
+        game.customerBurger.splice(1, 0, "onion")
+        document.getElementById("ticket").innerHTML = "The customer wants no cheese! <br><br> Top Bun, Onion, Tomato, Lettuce, Patty, Bottom Bun"
+      } else if (threeItems === 1) {
+        game.customerBurger.splice(2, 0, "cheese")
+        game.customerBurger.splice(1, 0, "lettuce")
+        game.customerBurger.splice(1, 0, "tomato")
+        document.getElementById("ticket").innerHTML = "The customer wants no onion! <br><br> Top Bun, Tomato, Lettuce, Patty, Cheese, Bottom Bun"
+      } else {
+        game.customerBurger.splice(2, 0, "cheese")
+        game.customerBurger.splice(1, 0, "lettuce")
+        game.customerBurger.splice(1, 0, "onion")
+        document.getElementById("ticket").innerHTML = "The customer wants no tomato! <br><br> Top Bun, Onion, Lettuce, Patty, Cheese, Bottom Bun"
+      }
     } else if (randomOrder === 2) {
       game.customerBurger.splice(1, 0, "lettuce")
       game.customerBurger.splice(1, 0, "tomato")
