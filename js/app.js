@@ -36,6 +36,9 @@ let game = {
   customerOrder: function () {
     let randomOrder = Math.floor(Math.random() * 5);
     let threeItems = Math.floor(Math.random() * 3);
+    let twoItems = Math.floor(Math.random() * 6);
+
+
     if (randomOrder === 4) {
       game.customerBurger.splice(2, 0, "cheese")
       game.customerBurger.splice(1, 0, "lettuce")
@@ -60,9 +63,31 @@ let game = {
         document.getElementById("ticket").innerHTML = "The customer wants no tomato! <br><br> Top Bun, Onion, Lettuce, Patty, Cheese, Bottom Bun"
       }
     } else if (randomOrder === 2) {
-      game.customerBurger.splice(1, 0, "lettuce")
-      game.customerBurger.splice(1, 0, "tomato")
-      document.getElementById("ticket").innerHTML = "The customer wants no onion and no cheese! <br><br> Top Bun, Tomato, Lettuce, Patty, Bottom Bun"
+      if (twoItems === 5) {
+        game.customerBurger.splice(2, 0, "cheese")
+        game.customerBurger.splice(1, 0, "lettuce")
+        document.getElementById("ticket").innerHTML = "The customer wants no tomato and no onion! <br><br> Top Bun, Lettuce, Patty, Cheese, Bottom Bun"
+      } else if (twoItems === 4) {
+        game.customerBurger.splice(2, 0, "cheese")
+        game.customerBurger.splice(1, 0, "tomato")
+        document.getElementById("ticket").innerHTML = "The customer wants no lettuce and no onion! <br><br> Top Bun, Tomato, Patty, Cheese, Bottom Bun"
+      } else if (twoItems === 3) {
+        game.customerBurger.splice(2, 0, "cheese")
+        game.customerBurger.splice(1, 0, "onion")
+        document.getElementById("ticket").innerHTML = "The customer wants no cheese and no onion! <br><br> Top Bun, Tomato, Lettuce, Patty, Bottom Bun"
+      } else if (twoItems === 2) {
+        game.customerBurger.splice(1, 0, "lettuce")
+        game.customerBurger.splice(1, 0, "onion")
+        document.getElementById("ticket").innerHTML = "The customer wants no tomato and no cheese! <br><br> Top Bun, Onion, Lettuce, Patty, Bottom Bun"
+      } else if (twoItems === 1) {
+        game.customerBurger.splice(1, 0, "tomato")
+        game.customerBurger.splice(1, 0, "onion")
+        document.getElementById("ticket").innerHTML = "The customer wants no cheese and no lettuce! <br><br> Top Bun, Onion, Tomato, Patty, Bottom Bun"
+      } else {
+        game.customerBurger.splice(1, 0, "lettuce")
+        game.customerBurger.splice(1, 0, "tomato")
+        document.getElementById("ticket").innerHTML = "The customer wants no onion and no cheese! <br><br> Top Bun, Tomato, Lettuce, Patty, Bottom Bun"
+      }
     } else if (randomOrder === 1) {
       game.customerBurger.splice(2, 0, "cheese")
       document.getElementById("ticket").innerHTML = "The customer wants a cheeseburger with extra meat! <br><br> Top Bun, Patty, Cheese, Bottom Bun"
